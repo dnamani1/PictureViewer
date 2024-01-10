@@ -1,6 +1,6 @@
 ﻿namespace PictureViewer
 {
-    partial class Form1
+    partial class PictureViewerWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,6 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.681756F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(1185, 729);
             this.tableLayoutPanel.TabIndex = 0;
-            this.tableLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // pictureBox
             // 
@@ -71,7 +70,6 @@
             this.pictureBox.Size = new System.Drawing.Size(1179, 667);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
-            this.pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // stretchCheckBox
             // 
@@ -97,7 +95,6 @@
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(1002, 50);
             this.flowLayoutPanel.TabIndex = 2;
-            this.flowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel_Paint);
             // 
             // showButton
             // 
@@ -162,7 +159,6 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.Name = "Form1";
             this.Text = "Picture Viewer";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

@@ -11,31 +11,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PictureViewer
 {
-    public partial class Form1 : Form
+    /// <summary>
+    /// Represents the main PictureViewer window.
+    /// </summary>
+    public partial class PictureViewerWindow : Form
     {
-        public Form1()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PictureViewerWindow"/> class.
+        /// </summary>
+        public PictureViewerWindow()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FlowLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -46,9 +32,9 @@ namespace PictureViewer
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            // If the user selects the Stretch check box, 
+            // If the user selects the Stretch check box,
             // change the PictureBox's
-            // SizeMode property to "Stretch". If the user clears 
+            // SizeMode property to "Stretch". If the user clears
             // the check box, change it to "Normal".
             if (stretchCheckBox.Checked)
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -60,7 +46,8 @@ namespace PictureViewer
         {
             // Show the Open File dialog. If the user clicks OK, load the
             // picture that the user chose.
-            if (openFileDialog.ShowDialog() == DialogResult.OK) {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
                 pictureBox.Load(openFileDialog.FileName);
             }
         }
